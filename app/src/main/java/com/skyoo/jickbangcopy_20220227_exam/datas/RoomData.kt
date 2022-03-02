@@ -28,6 +28,7 @@ class RoomData(
 
         return floorStr
 
+
     }
 
 //    가격은 억 단위와 천단위 로 변경 함
