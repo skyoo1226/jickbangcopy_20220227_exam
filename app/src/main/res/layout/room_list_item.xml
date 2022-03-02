@@ -38,7 +38,7 @@
             android:id="@+id/txtDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="설멸 문 구 자리" />
+            android:text="설명 문 구 자리" />
 
     </LinearLayout>
 
