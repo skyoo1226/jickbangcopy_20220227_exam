@@ -9,4 +9,5 @@ class RoomAdapter(
     val resId: Int,
     val mList: ArrayList<RoomData>
 ) : ArrayAdapter<RoomData>(mContext, resId, mList) {
+
 }
