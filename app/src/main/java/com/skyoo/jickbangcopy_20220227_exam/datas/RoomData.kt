@@ -1,5 +1,6 @@
 package com.skyoo.jickbangcopy_20220227_exam.datas
 
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
@@ -11,7 +12,7 @@ class RoomData(
     val address : String,
     val floor : Int,
     val description : String,
-) {
+)  : Serializable {
 
 //    층수값을 int값을 => 층수, 반지하, 지하1층 형태로 string으로 변하는 함수 작성
 
