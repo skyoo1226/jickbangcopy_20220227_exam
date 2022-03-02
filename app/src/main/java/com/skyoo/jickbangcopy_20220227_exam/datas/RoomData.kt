@@ -1,5 +1,8 @@
 package com.skyoo.jickbangcopy_20220227_exam.datas
 
+import java.text.NumberFormat
+import java.util.*
+
 // 하나의 방(class)에는 4가지 정보를 넣을 예정, 가격,행정구역,층수,설명문구 - 멤버변수로 만듬.
 
 
@@ -31,7 +34,23 @@ class RoomData(
 
     }
 
-//    가격은 억 단위와 천단위 로 변경 함
+//    가격은 억 단위와 천단위 로 변경 함 예) 1억 8천
+
+    fun getFormattedPrice() : String {
+        if (price < 10000)  {
+
+            val formattedPrice = NumberFormat.getNumberInstance(Locale.KOREA).format(price)
+
+            return  formattedPrice
+
+        }
+        else {
+            val formattedPrice = NumberFormat.getNumberInstance(Locale.KOREA).format(price)
+
+            return  formattedPrice
+
+        }
+    }
 
 
 

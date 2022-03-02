@@ -32,7 +32,8 @@ class RoomAdapter(
         val txtAddressFloor = row.findViewById<TextView>(R.id.txtAddressFloor)
         val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
-        txtprice.text = data.price.toString()
+//        txtprice.text = data.price.toString()  => 가격을 string(몇 억과 숫자에 컴마를 추가해 주는 값을 불러오게 아래와 같이 수정
+        txtprice.text = data.getFormattedPrice()
 
         txtDescription.text = data.description
 
