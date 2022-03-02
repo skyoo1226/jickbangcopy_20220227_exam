@@ -12,6 +12,7 @@ class RoomData(
     val address : String,
     val floor : Int,
     val description : String,
+//    ViewRoomDetailActivity에 RoomData를 각각 보내지 않고 Serializable로 한꺼번에 보냄
 )  : Serializable {
 
 //    층수값을 int값을 => 층수, 반지하, 지하1층 형태로 string으로 변하는 함수 작성
