@@ -40,23 +40,24 @@ class RoomData(
 
     fun getFormattedPrice() : String {
 
+        val  uk = price / 10000
+        val  rest = price % 10000
+        val formattedRest = NumberFormat.getNumberInstance(Locale.KOREA).format(rest)
+
 //        천단위 컴마 찍는 get넘버Instance 추가
-
         if (price < 10000)  {
-
             val formattedPrice = NumberFormat.getNumberInstance(Locale.KOREA).format(price)
 
             return  formattedPrice
-
         }
 
-//        억이 넘었을때 숫자를 계산하여 억 단위 표시
-//        단 2억, 1억인 경우 뒤에 0이 표시 됨 수정 어떻게???
-        else {
-            val  uk = price / 10000
-            val  rest = price % 10000
-            val formattedRest = NumberFormat.getNumberInstance(Locale.KOREA).format(rest)
+//        억이 넘었을때 숫자를 계산하여 억 단위와 나머지 숫자(문자) 표시
+//        단 2억, 1억인 경우 추가적인 조건문을 달아서 0일때 억단위까지만 표시
+        else if (rest == 0) {
+            return "${uk}억"
 
+        }
+        else {
             return "${uk}억 ${formattedRest}"
 
         }
